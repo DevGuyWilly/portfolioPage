@@ -83,6 +83,7 @@ export default async function BlogPostPage({ params }) {
                                alt={match[1]} 
                                fill 
                                className="object-cover"
+                               loading="lazy"
                              />
                           </div>
                           <figcaption className="text-center text-sm text-gray-500 mt-2">{match[1]}</figcaption>

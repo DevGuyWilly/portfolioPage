@@ -62,6 +62,7 @@ export default function WorkPage() {
                            alt={project.title} 
                            fill 
                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                           loading="lazy"
                          />
                     </div>
                     <div>

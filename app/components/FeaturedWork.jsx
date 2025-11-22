@@ -40,6 +40,7 @@ export default function FeaturedWork({ projects }) {
                            alt={project.title} 
                            fill 
                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                           loading="lazy"
                          />
                     </div>
                     <div className="flex justify-between items-start">
