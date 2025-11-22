@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
-  const [status, setStatus] = useState('idle'); // idle, submitting, success, error
+  const [status, setStatus] = useState('idle');
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -15,27 +15,15 @@ export default function ContactPage() {
     e.preventDefault();
     setStatus('submitting');
 
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      });
-
-      const data = await res.json();
-
-      if (data.success) {
-        setStatus('success');
-        setForm({ name: '', email: '', message: '' });
-        setTimeout(() => setStatus('idle'), 3000);
-      } else {
-        setStatus('error');
-        setTimeout(() => setStatus('idle'), 3000);
-      }
-    } catch (error) {
-      setStatus('error');
+    // Simulate network request for static export compatibility
+    setTimeout(() => {
+      const mailtoLink = `mailto:wdagah14@gmail.com?subject=Portfolio Contact from ${form.name}&body=Name: ${form.name}%0D%0AEmail: ${form.email}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(form.message)}`;
+      window.location.href = mailtoLink;
+      
+      setStatus('success');
+      setForm({ name: '', email: '', message: '' });
       setTimeout(() => setStatus('idle'), 3000);
-    }
+    }, 1000);
   };
 
   return (
@@ -94,7 +82,7 @@ export default function ContactPage() {
                  disabled={status === 'submitting'}
                  className="w-full flex items-center justify-center gap-2 py-4 bg-black text-white rounded-xl font-bold hover:bg-gray-800 transition-all disabled:opacity-50"
               >
-                 {status === 'submitting' ? 'Sending...' : (
+                 {status === 'submitting' ? 'Opening Email Client...' : (
                     <>Send Message <FiSend /></>
                  )}
               </button>
@@ -110,21 +98,10 @@ export default function ContactPage() {
                exit={{ opacity: 0, y: 50 }}
                className="fixed bottom-8 right-8 bg-green-500 text-white px-6 py-4 rounded-xl shadow-lg flex items-center gap-3 font-medium z-50"
              >
-                <FiCheck className="text-xl" /> Message sent successfully!
-             </motion.div>
-          )}
-          {status === 'error' && (
-             <motion.div 
-               initial={{ opacity: 0, y: 50 }}
-               animate={{ opacity: 1, y: 0 }}
-               exit={{ opacity: 0, y: 50 }}
-               className="fixed bottom-8 right-8 bg-red-500 text-white px-6 py-4 rounded-xl shadow-lg flex items-center gap-3 font-medium z-50"
-             >
-                <FiAlertCircle className="text-xl" /> Something went wrong.
+                <FiCheck className="text-xl" /> Opening your email client...
              </motion.div>
           )}
        </AnimatePresence>
     </div>
   );
 }
-
