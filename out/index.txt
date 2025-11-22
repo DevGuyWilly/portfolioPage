@@ -1,0 +1,103 @@
+1:"$Sreact.fragment"
+2:I[78404,["/_next/static/chunks/b5f27fb5d565433c.js","/_next/static/chunks/a373fb308fb5d2a7.js"],"default"]
+3:I[53853,["/_next/static/chunks/b5f27fb5d565433c.js","/_next/static/chunks/a373fb308fb5d2a7.js"],"default"]
+4:I[39756,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"default"]
+5:I[37457,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"default"]
+6:I[92943,["/_next/static/chunks/b5f27fb5d565433c.js","/_next/static/chunks/a373fb308fb5d2a7.js"],"default"]
+7:I[99287,["/_next/static/chunks/b5f27fb5d565433c.js","/_next/static/chunks/a373fb308fb5d2a7.js","/_next/static/chunks/0d9f45dc436cd38d.js"],"default"]
+8:I[67379,["/_next/static/chunks/b5f27fb5d565433c.js","/_next/static/chunks/a373fb308fb5d2a7.js","/_next/static/chunks/0d9f45dc436cd38d.js"],"default"]
+9:I[6857,["/_next/static/chunks/b5f27fb5d565433c.js","/_next/static/chunks/a373fb308fb5d2a7.js","/_next/static/chunks/0d9f45dc436cd38d.js"],"default"]
+11:I[68027,[],"default"]
+:HL["/_next/static/chunks/a2acba013a74f1c4.css","style"]
+:HL["/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+a:T659,React has evolved significantly since its inception. With the introduction of **React Server Components (RSC)**, the way we build web applications is undergoing a fundamental shift.
+
+## Why Server Components?
+
+Traditionally, React rendered entirely on the client (CSR) or hydrated a server-rendered HTML payload (SSR). Both approaches required sending a significant amount of JavaScript to the browser to make the page interactive.
+
+Server Components allow us to render components **exclusively on the server**. This means:
+
+- **Zero Bundle Size**: Dependencies used in Server Components aren't sent to the client.
+- **Direct Backend Access**: You can query databases directly inside your component without an API layer.
+- **Automatic Code Splitting**: Client components imported by Server Components are automatically split.
+
+![React Server Components Architecture](https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=2070&auto=format&fit=crop)
+
+## The Mental Model Shift
+
+Thinking in RSC requires separating your app into the "Server Graph" and the "Client Graph".
+
+- **Server Components**: Data fetching, secure logic, heavy dependencies.
+- **Client Components**: Interactivity (useState, useEffect), browser APIs, event listeners.
+
+This hybrid model offers the best of both worlds: the SEO and performance of server rendering with the rich interactivity of client-side apps.
+
+## Conclusion
+
+As Next.js and other frameworks adopt these patterns, mastering RSC is becoming essential for modern frontend developers. It's not just a performance optimization; it's a better way to architect scalable applications.b:T4bd,A Design System is more than just a UI kit—it's the single source of truth for your product's design language.
+
+## Core Elements
+
+1. **Design Tokens**: The atoms of your system. Colors, typography, spacing, and shadows defined as variables.
+2. **Component Library**: Reusable, accessible UI elements like buttons, inputs, and cards.
+3. **Documentation**: Guidelines on *how* and *when* to use these components.
+
+![Design System Components](https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop)
+
+## Atomic Design Methodology
+
+Brad Frost's Atomic Design is a popular methodology for organizing design systems:
+
+- **Atoms**: Basic HTML elements (Labels, Inputs, Buttons).
+- **Molecules**: Groups of atoms working together (Search Form).
+- **Organisms**: Complex UI sections (Header, Sidebar).
+- **Templates**: Page layouts without content.
+- **Pages**: Final instances with real content.
+
+## Why You Need One
+
+Without a design system, products accumulate "design debt"—inconsistent colors, slightly different button styles, and confusing UX patterns. A robust system ensures consistency, speeds up development, and improves collaboration between designers and developers.c:T428,Animation on the web used to be hard. CSS transitions are limited, and Web API animations are verbose. Enter **Framer Motion**.
+
+## Declarative Animations
+
+Framer Motion allows you to describe *what* you want to happen, not *how*.
+
+```jsx
+<motion.div 
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+/>
+```
+
+## Layout Animations
+
+One of the most powerful features is the `layout` prop. It automatically animates changes in layout, such as reordering a list or resizing a card, with zero calculation required from you.
+
+![Abstract Motion Art](https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2070&auto=format&fit=crop)
+
+## Gestures
+
+Adding hover, tap, and drag interactions is trivial:
+
+- `whileHover={{ scale: 1.1 }}`
+- `whileTap={{ scale: 0.9 }}`
+- `drag`
+
+## Shared Layout Transitions
+
+With `layoutId`, you can animate components between different parts of the tree, creating seamless morphing effects like the ones seen in the App Store or Spotify.
+
+Framer Motion makes these high-fidelity interactions accessible to every React developer.0:{"P":null,"b":"L43E_dGHXJNLxM31s53Ct","c":["",""],"q":"","i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/a2acba013a74f1c4.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/b5f27fb5d565433c.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/a373fb308fb5d2a7.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"scroll-smooth dark","children":["$","body",null,{"className":"inter_b006827b-module__8phXqa__className antialiased flex h-screen overflow-hidden bg-[var(--background)]","children":[["$","$L2",null,{}],["$","$L3",null,{}],["$","main",null,{"className":"flex-1 overflow-y-auto relative snap-y snap-mandatory scroll-smooth no-scrollbar","children":["$","div",null,{"className":"min-h-full p-3 md:p-4 flex justify-center","children":["$","div",null,{"className":"w-full bg-white rounded-[2rem] shadow-sm min-h-[calc(100vh-2rem)] relative overflow-hidden","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]}],["$","$L6",null,{}]]}]}]]}],{"children":[["$","$1","c",{"children":[["$","div",null,{"className":"flex flex-col min-h-full","children":[["$","$L7",null,{}],["$","$L8",null,{"projects":[{"id":"1","title":"App Launch","slug":"app-launch","excerpt":"I'm proud to announce the launch of the app I've been working the past 2 years on. This one's gonna change the world.","description":"Full description of the App Launch project. It involves React, Node.js, and a lot of coffee.","tags":["React","Next.js","Node.js"],"date":"Oct 2025","link":"https://example.com","repo":"https://github.com/example/app-launch","image":"/assets/workone.jpg"},{"id":"2","title":"E-commerce Platform","slug":"ecommerce-platform","excerpt":"A scalable e-commerce solution built for high traffic and conversion.","description":"Detailed breakdown of the e-commerce platform architecture.","tags":["TypeScript"],"date":"Sep 2025","link":"https://example.com","repo":"https://github.com/example/ecommerce","image":"/assets/worktwo.jpg"}]}],["$","$L9",null,{"posts":[{"id":"1","title":"The Future of React: Server Components & Beyond","slug":"future-of-react","excerpt":"Deep dive into React Server Components, Suspense, and how the React ecosystem is evolving to blur the lines between client and server.","coverImage":"https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=2070&auto=format&fit=crop","content":"$a","date":"Nov 2025","readTime":"5 min read"},{"id":"2","title":"Design Systems 101: Building for Scale","slug":"design-systems-101","excerpt":"How to build a consistent design language that scales with your team. From atomic design principles to token management.","coverImage":"https://images.unsplash.com/photo-1586717791821-3f44a5638d48?q=80&w=2070&auto=format&fit=crop","content":"$b","date":"Oct 2025","readTime":"7 min read"},{"id":"3","title":"Mastering Framer Motion: The Magic of Micro-interactions","slug":"mastering-framer-motion","excerpt":"Unlock the power of declarative animations. Learn how to create layout animations, gesture-based interactions, and shared element transitions.","coverImage":"https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1964&auto=format&fit=crop","content":"$c","date":"Sep 2025","readTime":"6 min read"}]}],"$Ld"]}],["$Le"],"$Lf"]}],{},null,false,false]},null,false,false],"$L10",false]],"m":"$undefined","G":["$11",[]],"S":true}
+12:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
+13:"$Sreact.suspense"
+15:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"ViewportBoundary"]
+17:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"MetadataBoundary"]
+d:["$","footer",null,{"id":"footer","className":"p-8 md:p-12 lg:p-16 border-t border-gray-100 mt-auto","children":["$","div",null,{"className":"flex flex-col md:flex-row justify-between items-center gap-6 text-gray-500 text-sm","children":[["$","p",null,{"children":"© 2025 Wilson Dagah. All rights reserved."}],["$","div",null,{"className":"flex gap-6","children":[["$","a",null,{"href":"#","className":"hover:text-black transition-colors","children":"Twitter"}],["$","a",null,{"href":"#","className":"hover:text-black transition-colors","children":"LinkedIn"}],["$","a",null,{"href":"#","className":"hover:text-black transition-colors","children":"Github"}],["$","a",null,{"href":"mailto:hello@emanuele.dev","className":"hover:text-black transition-colors","children":"Email"}]]}]]}]}]
+e:["$","script","script-0",{"src":"/_next/static/chunks/0d9f45dc436cd38d.js","async":true,"nonce":"$undefined"}]
+f:["$","$L12",null,{"children":["$","$13",null,{"name":"Next.MetadataOutlet","children":"$@14"}]}]
+10:["$","$1","h",{"children":[null,["$","$L15",null,{"children":"$@16"}],["$","div",null,{"hidden":true,"children":["$","$L17",null,{"children":["$","$13",null,{"name":"Next.Metadata","children":"$@18"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+19:I[27201,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"IconMark"]
+18:[["$","title","0",{"children":"Wilson Dagah - Software Engineer"}],["$","meta","1",{"name":"description","content":"Forward-thinking Software Engineer specializing in Java, Python, and Cloud Platforms."}],["$","link","2",{"rel":"icon","href":"/icon.jpg?icon.c8212d44.jpg","sizes":"1284x1611","type":"image/jpeg"}],["$","$L19","3",{}]]
+14:null

@@ -1,30 +1,32 @@
 [
   {
     "id": "1",
-    "title": "The Future of React",
+    "title": "The Future of React: Server Components & Beyond",
     "slug": "future-of-react",
-    "excerpt": "Exploring Server Components and what they mean for frontend development.",
-    "content": "Full content of the blog post about React Server Components...",
+    "excerpt": "Deep dive into React Server Components, Suspense, and how the React ecosystem is evolving to blur the lines between client and server.",
+    "coverImage": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=2070&auto=format&fit=crop",
+    "content": "React has evolved significantly since its inception. With the introduction of **React Server Components (RSC)**, the way we build web applications is undergoing a fundamental shift.\n\n## Why Server Components?\n\nTraditionally, React rendered entirely on the client (CSR) or hydrated a server-rendered HTML payload (SSR). Both approaches required sending a significant amount of JavaScript to the browser to make the page interactive.\n\nServer Components allow us to render components **exclusively on the server**. This means:\n\n- **Zero Bundle Size**: Dependencies used in Server Components aren't sent to the client.\n- **Direct Backend Access**: You can query databases directly inside your component without an API layer.\n- **Automatic Code Splitting**: Client components imported by Server Components are automatically split.\n\n![React Server Components Architecture](https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=2070&auto=format&fit=crop)\n\n## The Mental Model Shift\n\nThinking in RSC requires separating your app into the \"Server Graph\" and the \"Client Graph\".\n\n- **Server Components**: Data fetching, secure logic, heavy dependencies.\n- **Client Components**: Interactivity (useState, useEffect), browser APIs, event listeners.\n\nThis hybrid model offers the best of both worlds: the SEO and performance of server rendering with the rich interactivity of client-side apps.\n\n## Conclusion\n\nAs Next.js and other frameworks adopt these patterns, mastering RSC is becoming essential for modern frontend developers. It's not just a performance optimization; it's a better way to architect scalable applications.",
     "date": "Nov 2025",
     "readTime": "5 min read"
   },
   {
     "id": "2",
-    "title": "Design Systems 101",
+    "title": "Design Systems 101: Building for Scale",
     "slug": "design-systems-101",
-    "excerpt": "How to build a consistent design language for your product.",
-    "content": "Full content about design systems...",
+    "excerpt": "How to build a consistent design language that scales with your team. From atomic design principles to token management.",
+    "coverImage": "https://images.unsplash.com/photo-1586717791821-3f44a5638d48?q=80&w=2070&auto=format&fit=crop",
+    "content": "A Design System is more than just a UI kit—it's the single source of truth for your product's design language.\n\n## Core Elements\n\n1. **Design Tokens**: The atoms of your system. Colors, typography, spacing, and shadows defined as variables.\n2. **Component Library**: Reusable, accessible UI elements like buttons, inputs, and cards.\n3. **Documentation**: Guidelines on *how* and *when* to use these components.\n\n![Design System Components](https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop)\n\n## Atomic Design Methodology\n\nBrad Frost's Atomic Design is a popular methodology for organizing design systems:\n\n- **Atoms**: Basic HTML elements (Labels, Inputs, Buttons).\n- **Molecules**: Groups of atoms working together (Search Form).\n- **Organisms**: Complex UI sections (Header, Sidebar).\n- **Templates**: Page layouts without content.\n- **Pages**: Final instances with real content.\n\n## Why You Need One\n\nWithout a design system, products accumulate \"design debt\"—inconsistent colors, slightly different button styles, and confusing UX patterns. A robust system ensures consistency, speeds up development, and improves collaboration between designers and developers.",
     "date": "Oct 2025",
     "readTime": "7 min read"
   },
   {
     "id": "3",
-    "title": "Mastering Framer Motion",
+    "title": "Mastering Framer Motion: The Magic of Micro-interactions",
     "slug": "mastering-framer-motion",
-    "excerpt": "Tips and tricks for smooth animations in React apps.",
-    "content": "Full content about Framer Motion...",
+    "excerpt": "Unlock the power of declarative animations. Learn how to create layout animations, gesture-based interactions, and shared element transitions.",
+    "coverImage": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1964&auto=format&fit=crop",
+    "content": "Animation on the web used to be hard. CSS transitions are limited, and Web API animations are verbose. Enter **Framer Motion**.\n\n## Declarative Animations\n\nFramer Motion allows you to describe *what* you want to happen, not *how*.\n\n```jsx\n<motion.div \n  initial={{ opacity: 0 }}\n  animate={{ opacity: 1 }}\n/>\n```\n\n## Layout Animations\n\nOne of the most powerful features is the `layout` prop. It automatically animates changes in layout, such as reordering a list or resizing a card, with zero calculation required from you.\n\n![Abstract Motion Art](https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2070&auto=format&fit=crop)\n\n## Gestures\n\nAdding hover, tap, and drag interactions is trivial:\n\n- `whileHover={{ scale: 1.1 }}`\n- `whileTap={{ scale: 0.9 }}`\n- `drag`\n\n## Shared Layout Transitions\n\nWith `layoutId`, you can animate components between different parts of the tree, creating seamless morphing effects like the ones seen in the App Store or Spotify.\n\nFramer Motion makes these high-fidelity interactions accessible to every React developer.",
     "date": "Sep 2025",
     "readTime": "6 min read"
   }
 ]
-
