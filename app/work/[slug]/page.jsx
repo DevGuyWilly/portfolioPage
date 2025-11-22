@@ -6,10 +6,8 @@ import { FiGithub, FiExternalLink, FiArrowLeft } from 'react-icons/fi';
 
 // Helper to handle image paths
 const getImagePath = (src) => {
-  const basePath = process.env.NODE_ENV === 'production' ? '/portfolioPage' : '';
   if (src.startsWith('http') || src.startsWith('data:')) return src;
-  const cleanSrc = src.startsWith('/') ? src : `/${src}`;
-  return `${basePath}${cleanSrc}`;
+  return src;
 };
 
 export async function generateStaticParams() {

@@ -6,12 +6,8 @@ import { FiArrowRight } from 'react-icons/fi';
 
 // Helper to handle image paths in both dev and prod (GitHub Pages)
 const getImagePath = (src) => {
-  const basePath = process.env.NODE_ENV === 'production' ? '/portfolioPage' : '';
-  // If src is absolute (http) or data URI, return as is
-  if (src.startsWith('http') || src.startsWith('data:')) return src;
-  // Ensure src starts with /
-  const cleanSrc = src.startsWith('/') ? src : `/${src}`;
-  return `${basePath}${cleanSrc}`;
+  // No base path needed for custom domain
+  return src;
 };
 
 export default function FeaturedWork({ projects }) {

@@ -6,8 +6,8 @@ import Image from 'next/image';
 
 // Helper to handle image paths in both dev and prod (GitHub Pages)
 const getImagePath = (src) => {
-  const basePath = process.env.NODE_ENV === 'production' ? '/portfolioPage' : '';
-  return `${basePath}${src}`;
+  // No base path needed for custom domain
+  return src;
 };
 
 export default function Hero() {
