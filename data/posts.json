@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "title": "The Future of React",
+    "slug": "future-of-react",
+    "excerpt": "Exploring Server Components and what they mean for frontend development.",
+    "content": "Full content of the blog post about React Server Components...",
+    "date": "Nov 2025",
+    "readTime": "5 min read"
+  },
+  {
+    "id": "2",
+    "title": "Design Systems 101",
+    "slug": "design-systems-101",
+    "excerpt": "How to build a consistent design language for your product.",
+    "content": "Full content about design systems...",
+    "date": "Oct 2025",
+    "readTime": "7 min read"
+  },
+  {
+    "id": "3",
+    "title": "Mastering Framer Motion",
+    "slug": "mastering-framer-motion",
+    "excerpt": "Tips and tricks for smooth animations in React apps.",
+    "content": "Full content about Framer Motion...",
+    "date": "Sep 2025",
+    "readTime": "6 min read"
+  }
+]
+

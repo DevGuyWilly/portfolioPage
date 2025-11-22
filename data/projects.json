@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "title": "App Launch",
+    "slug": "app-launch",
+    "excerpt": "I'm proud to announce the launch of the app I've been working the past 2 years on. This one's gonna change the world.",
+    "description": "Full description of the App Launch project. It involves React, Node.js, and a lot of coffee.",
+    "tags": ["React", "Next.js", "Node.js"],
+    "date": "Oct 2025",
+    "link": "https://example.com",
+    "repo": "https://github.com/example/app-launch",
+    "image": "/assets/workone.jpg"
+  },
+  {
+    "id": "2",
+    "title": "E-commerce Platform",
+    "slug": "ecommerce-platform",
+    "excerpt": "A scalable e-commerce solution built for high traffic and conversion.",
+    "description": "Detailed breakdown of the e-commerce platform architecture.",
+    "tags": ["TypeScript", "Shopify", "Tailwind"],
+    "date": "Sep 2025",
+    "link": "https://example.com",
+    "repo": "https://github.com/example/ecommerce",
+    "image": "/assets/worktwo.jpg"
+  },
+  {
+    "id": "3",
+    "title": "Portfolio v1",
+    "slug": "portfolio-v1",
+    "excerpt": "My first portfolio website. A bit rusty but full of character.",
+    "description": "Reflections on my first portfolio build.",
+    "tags": ["HTML", "CSS", "JS"],
+    "date": "Aug 2024",
+    "link": "https://example.com",
+    "repo": "https://github.com/example/portfolio-v1",
+    "image": "/assets/design-mock.jpg"
+  },
+  {
+    "id": "4",
+    "title": "Weather App",
+    "slug": "weather-app",
+    "excerpt": "Minimalist weather dashboard using open APIs.",
+    "description": "How I built a weather app that doesn't look boring.",
+    "tags": ["React", "API", "Framer Motion"],
+    "date": "Jul 2025",
+    "link": "https://example.com",
+    "repo": "https://github.com/example/weather-app",
+    "image": "/assets/design-mock.jpg"
+  }
+]
