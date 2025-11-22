@@ -8,7 +8,7 @@ import { useState } from 'react';
 const navItems = [
   { label: 'Home', href: '/', icon: FiHome },
   { label: 'Work', href: '/work', icon: FiGrid },
-  { label: 'Blog', href: '/blog', icon: FiEdit3 },
+  { label: 'Notes', href: '/blog', icon: FiEdit3 },
   { label: 'About', href: '/about', icon: FiUser },
 ];
 

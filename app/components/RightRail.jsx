@@ -3,7 +3,7 @@
 const anchors = [
   { label: 'Hero', id: 'hero' },
   { label: 'Featured work', id: 'featured-work' },
-  { label: 'Blog', id: 'blog' },
+  { label: 'Notes', id: 'blog' },
   { label: 'Footer', id: 'footer' }
 ];
 

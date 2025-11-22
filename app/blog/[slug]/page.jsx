@@ -28,7 +28,7 @@ export default async function BlogPostPage({ params }) {
   return (
     <article className="p-8 md:p-12 lg:p-16 min-h-full max-w-4xl mx-auto">
        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white mb-12 transition-colors">
-          <FiArrowLeft /> Back to blog
+          <FiArrowLeft /> Back to notes
        </Link>
 
        <header className="mb-12 text-center">

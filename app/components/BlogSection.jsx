@@ -4,14 +4,14 @@ import { motion } from 'framer-motion';
 
 export default function BlogSection({ posts }) {
   return (
-    <section id="blog" className="p-8 md:p-12 lg:p-16 border-t border-gray-100">
+    <section id="blog" className="p-8 md:p-12 lg:p-16 border-t border-gray-100 dark:border-gray-800">
         <div className="flex justify-between items-end mb-12">
           <div>
              <span className="text-sm font-bold text-gray-400 mb-2 block">02</span>
-             <h2 className="text-3xl font-bold">Latest articles</h2>
+             <h2 className="text-3xl font-bold">Latest notes</h2>
           </div>
-          <Link href="/blog" className="text-sm font-medium border-b border-black pb-0.5 hover:opacity-70 transition-opacity">
-             Read blog
+          <Link href="/blog" className="text-sm font-medium border-b border-black dark:border-white pb-0.5 hover:opacity-70 transition-opacity">
+             Read notes
           </Link>
        </div>
 

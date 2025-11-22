@@ -6,8 +6,8 @@ export default function BlogPage() {
   return (
     <div className="p-8 md:p-12 lg:p-16 min-h-full">
       <div className="max-w-3xl mb-12">
-         <h1 className="text-4xl font-bold mb-6">Blog</h1>
-         <p className="text-gray-600 text-lg">Thoughts on design, development, and the future of the web.</p>
+         <h1 className="text-4xl font-bold mb-6">Notes</h1>
+         <p className="text-gray-600 dark:text-gray-400 text-lg">Thoughts on design, development, and the future of the web.</p>
       </div>
 
       <div className="grid gap-8">
