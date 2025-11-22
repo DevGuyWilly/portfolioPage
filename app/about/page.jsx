@@ -69,7 +69,7 @@ export default function AboutPage() {
                
                <div className="pt-6">
                    <a 
-                     href="/Wilson_Dagah_CV.pdf" 
+                     href="/Wilson_Dagah.pdf" 
                      download
                      className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                    >
