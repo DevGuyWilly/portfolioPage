@@ -4,6 +4,16 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FiArrowRight } from 'react-icons/fi';
 
+// Helper to handle image paths in both dev and prod (GitHub Pages)
+const getImagePath = (src) => {
+  const basePath = process.env.NODE_ENV === 'production' ? '/portfolioPage' : '';
+  // If src is absolute (http) or data URI, return as is
+  if (src.startsWith('http') || src.startsWith('data:')) return src;
+  // Ensure src starts with /
+  const cleanSrc = src.startsWith('/') ? src : `/${src}`;
+  return `${basePath}${cleanSrc}`;
+};
+
 export default function FeaturedWork({ projects }) {
   return (
     <section id="featured-work" className="p-8 md:p-12 lg:p-16 border-t border-gray-100">
@@ -30,7 +40,7 @@ export default function FeaturedWork({ projects }) {
                  <Link href={`/work/${project.slug}`} className="block">
                     <div className="aspect-video w-full bg-gray-100 rounded-2xl overflow-hidden relative mb-6">
                          <Image 
-                           src={project.image} 
+                           src={getImagePath(project.image)} 
                            alt={project.title} 
                            fill 
                            className="object-cover group-hover:scale-105 transition-transform duration-700"

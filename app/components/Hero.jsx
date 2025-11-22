@@ -4,6 +4,12 @@ import { motion } from 'framer-motion';
 import { FiCopy, FiCalendar, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import Image from 'next/image';
 
+// Helper to handle image paths in both dev and prod (GitHub Pages)
+const getImagePath = (src) => {
+  const basePath = process.env.NODE_ENV === 'production' ? '/portfolioPage' : '';
+  return `${basePath}${src}`;
+};
+
 export default function Hero() {
   const [copied, setCopied] = useState(false);
 
@@ -19,7 +25,7 @@ export default function Hero() {
       <div className="absolute top-8 left-8 right-8 flex justify-between items-start">
          <div className="flex items-center gap-5">
             <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-gray-100">
-               <Image src="/assets/profile-picture.jpg" alt="Wilson Dagah" fill className="object-cover" />
+               <Image src={getImagePath("/assets/profile-picture.jpg")} alt="Wilson Dagah" fill className="object-cover" />
             </div>
             <div>
                <h3 className="font-bold text-lg">Wilson Dagah</h3>

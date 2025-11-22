@@ -5,6 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // GitHub Pages is served from a subpath, so we need to set the basePath
+  basePath: process.env.NODE_ENV === 'production' ? '/portfolioPage' : '',
 }
 
 module.exports = nextConfig

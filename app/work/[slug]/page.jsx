@@ -4,6 +4,14 @@ import { notFound } from 'next/navigation';
 import projects from '@/data/projects.json';
 import { FiGithub, FiExternalLink, FiArrowLeft } from 'react-icons/fi';
 
+// Helper to handle image paths
+const getImagePath = (src) => {
+  const basePath = process.env.NODE_ENV === 'production' ? '/portfolioPage' : '';
+  if (src.startsWith('http') || src.startsWith('data:')) return src;
+  const cleanSrc = src.startsWith('/') ? src : `/${src}`;
+  return `${basePath}${cleanSrc}`;
+};
+
 export async function generateStaticParams() {
   return projects.map((project) => ({
     slug: project.slug,
@@ -38,7 +46,7 @@ export default function ProjectPage({ params }) {
 
        <div className="aspect-video w-full bg-gray-100 rounded-2xl overflow-hidden relative mb-12">
            <Image 
-             src={project.image} 
+             src={getImagePath(project.image)} 
              alt={project.title} 
              fill 
              className="object-cover"

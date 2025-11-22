@@ -6,6 +6,14 @@ import Image from 'next/image';
 import projects from '@/data/projects.json';
 import { FiArrowRight } from 'react-icons/fi';
 
+// Helper to handle image paths
+const getImagePath = (src) => {
+  const basePath = process.env.NODE_ENV === 'production' ? '/portfolioPage' : '';
+  if (src.startsWith('http') || src.startsWith('data:')) return src;
+  const cleanSrc = src.startsWith('/') ? src : `/${src}`;
+  return `${basePath}${cleanSrc}`;
+};
+
 const allTags = ['All', ...new Set(projects.flatMap(p => p.tags))];
 
 export default function WorkPage() {
@@ -52,7 +60,7 @@ export default function WorkPage() {
                  <Link href={`/work/${project.slug}`} className="block">
                     <div className="aspect-[4/3] w-full bg-gray-100 rounded-2xl overflow-hidden relative mb-4">
                          <Image 
-                           src={project.image} 
+                           src={getImagePath(project.image)} 
                            alt={project.title} 
                            fill 
                            className="object-cover group-hover:scale-105 transition-transform duration-700"
