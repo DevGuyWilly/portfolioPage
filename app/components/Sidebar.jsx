@@ -75,14 +75,14 @@ export default function Sidebar() {
             })}
         </nav>
 
-        <button className={`flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-white hover:shadow-sm rounded-xl transition-all w-full group ${isCollapsed ? 'justify-center' : ''}`}>
+        <Link href="/contact" className={`flex items-center gap-3 px-4 py-3 text-gray-600 dark:text-gray-400 rounded-xl transition-all w-full group ${isCollapsed ? 'justify-center' : 'hover:bg-white dark:hover:bg-gray-700 hover:shadow-sm'}`}>
             <div className="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shrink-0">
                <FiMessageSquare size={14} />
             </div>
             {!isCollapsed && (
-              <span className="font-medium text-sm whitespace-nowrap">Quick message</span>
+              <span className="font-medium text-sm whitespace-nowrap">Message</span>
             )}
-        </button>
+        </Link>
     </aside>
   );
 }

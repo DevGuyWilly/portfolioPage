@@ -21,8 +21,9 @@ export default function Hero() {
 
   return (
     <section id="hero" className="px-8 md:px-12 lg:px-16 py-12 md:py-16 lg:py-20 min-h-[90vh] flex flex-col justify-center relative">
+
       {/* Top Meta */}
-      <div className="absolute top-8 left-8 right-8 flex justify-between items-start">
+      <div className="absolute top-8 left-8 right-8 flex justify-between items-start mt-15 md:mt-10">
          <div className="flex items-center gap-5">
             <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-gray-100">
                <Image src={getImagePath("/assets/profile-picture.jpg")} alt="Wilson Dagah" fill className="object-cover" />
@@ -38,7 +39,7 @@ export default function Hero() {
       </div>
 
       {/* Main Heading */}
-      <div className="mt-30 md:mt-10 max-w-4xl">
+      <div className="mt-35 md:mt-10 max-w-4xl w-full">
         <motion.h1 
           className="text-5xl md:text-7xl font-bold leading-tight mb-8 tracking-tight"
           initial={{ opacity: 0, y: 20 }}
@@ -54,7 +55,7 @@ export default function Hero() {
            animate={{ opacity: 1, y: 0 }}
            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
-          I’m a forward-thinking <strong>Software Engineer</strong> specializing in designing, building, and deploying resilient, scalable, data-driven applications using <strong className="text-black">Java</strong> and <strong className="text-black">Python</strong> across cloud platforms.
+          I’m a forward-thinking <strong>Software Engineer</strong> specializing in designing, building, and deploying resilient, scalable, data-driven applications using <strong className="text-black">Java</strong> and <strong className="text-black">Javascript/Typescript</strong> across cloud platforms.
         </motion.p>
         
         <motion.div 

@@ -27,16 +27,16 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="p-8 md:p-12 lg:p-16 min-h-full relative">
-       <div className="max-w-2xl mx-auto">
-          <h1 className="text-4xl font-bold mb-6 text-center">Get in touch</h1>
-          <p className="text-gray-600 text-center mb-12 text-lg">
+    <div className="p-8 md:p-12 lg:p-16 min-h-full relative flex items-center justify-center">
+       <div className="max-w-2xl w-full">
+          <h1 className="text-4xl font-bold mb-6 text-center text-black dark:text-white">Get in touch</h1>
+          <p className="text-gray-600 dark:text-gray-300 text-center mb-12 text-lg">
              Have a project in mind or just want to say hi? Feel free to send me a message.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                 <label htmlFor="name" className="block text-sm font-bold text-gray-700 mb-2">Name</label>
+                 <label htmlFor="name" className="block text-sm font-bold text-gray-700 dark:text-gray-200 mb-2">Name</label>
                  <input 
                    type="text" 
                    id="name" 
@@ -44,13 +44,13 @@ export default function ContactPage() {
                    required
                    value={form.name}
                    onChange={handleChange}
-                   className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-black focus:ring-0 outline-none transition-colors"
+                   className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 focus:border-black dark:focus:border-white focus:ring-0 outline-none transition-colors text-black dark:text-white placeholder:text-gray-400"
                    placeholder="John Doe"
                  />
               </div>
               
               <div>
-                 <label htmlFor="email" className="block text-sm font-bold text-gray-700 mb-2">Email</label>
+                 <label htmlFor="email" className="block text-sm font-bold text-gray-700 dark:text-gray-200 mb-2">Email</label>
                  <input 
                    type="email" 
                    id="email" 
@@ -58,13 +58,13 @@ export default function ContactPage() {
                    required
                    value={form.email}
                    onChange={handleChange}
-                   className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-black focus:ring-0 outline-none transition-colors"
+                   className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 focus:border-black dark:focus:border-white focus:ring-0 outline-none transition-colors text-black dark:text-white placeholder:text-gray-400"
                    placeholder="john@example.com"
                  />
               </div>
               
               <div>
-                 <label htmlFor="message" className="block text-sm font-bold text-gray-700 mb-2">Message</label>
+                 <label htmlFor="message" className="block text-sm font-bold text-gray-700 dark:text-gray-200 mb-2">Message</label>
                  <textarea 
                    id="message" 
                    name="message"
@@ -72,7 +72,7 @@ export default function ContactPage() {
                    rows={6}
                    value={form.message}
                    onChange={handleChange}
-                   className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-black focus:ring-0 outline-none transition-colors resize-none"
+                   className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 focus:border-black dark:focus:border-white focus:ring-0 outline-none transition-colors resize-none text-black dark:text-white placeholder:text-gray-400"
                    placeholder="Tell me about your project..."
                  />
               </div>
@@ -80,7 +80,7 @@ export default function ContactPage() {
               <button 
                  type="submit"
                  disabled={status === 'submitting'}
-                 className="w-full flex items-center justify-center gap-2 py-4 bg-black text-white rounded-xl font-bold hover:bg-gray-800 transition-all disabled:opacity-50"
+                 className="w-full flex items-center justify-center gap-2 py-4 bg-black dark:bg-white text-white dark:text-black rounded-xl font-bold hover:bg-gray-800 dark:hover:bg-gray-200 transition-all disabled:opacity-50"
               >
                  {status === 'submitting' ? 'Opening Email Client...' : (
                     <>Send Message <FiSend /></>
