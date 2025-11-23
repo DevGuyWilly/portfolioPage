@@ -35,7 +35,7 @@
     "date": "Jan 2025",
     "link": "https://github.com/DevGuyWilly/SecureFileSharing",
     "repo": "https://github.com/DevGuyWilly/SecureFileSharing",
-    "image": "https://img.crx4chrome.com/19/ec/59/odkdlljoangmamjilkamahebpkgpeacp-featured.webp",
+    "image": "/assets/github.png",
     "hasCustomImage": false
   },
   {
@@ -48,7 +48,7 @@
     "date": "Dec 2024",
     "link": "#",
     "repo": "https://github.com/DevGuyWilly",
-    "image": "https://img.crx4chrome.com/19/ec/59/odkdlljoangmamjilkamahebpkgpeacp-featured.webp",
+    "image": "/assets/github.png",
     "hasCustomImage": false
   }
 ]
